@@ -1,0 +1,61 @@
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            padding: 0;
+            /* transition: .25s ease-in; */
+        }
+        
+        .nav-link,
+        .nav-link:hover,
+        .dataTables_info {
+            color: white;
+        }
+        
+        td,
+        th,
+        .dataTables_info {
+            text-align: center;
+        }
+        
+        .pagination {
+            justify-content: center !important;
+        }
+        
+        .page-item .page-link {
+            color: #212529;
+        }
+        
+        .page-item.active .page-link {
+            background-color: #212529;
+            border-color: #212529;
+            box-shadow: none;
+        }
+        
+        .page-item.previous .page-link,
+        .page-item.next .page-link {
+            box-shadow: none;
+        }
+        
+        #newButtonType,
+        .newButtonTask {
+            min-height: 50px !important;
+        }
+        
+        div.dataTables_wrapper div.dataTables_info {
+            padding-top: .50em !important;
+        }
+        
+        #contextMenu {
+            z-index: 100;
+            width: 100px;
+            /* transition: none; */
+        }
+        
+        #inputAboutTask {
+            height: 70px;
+        }
+        /* #dataTableType th,
+        #dataTableTask th {
+            transition: none;
+        } */
