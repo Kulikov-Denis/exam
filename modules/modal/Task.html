@@ -1,0 +1,55 @@
+<div data-role="modalTask">
+    <div class="modal fade" id="modalTask" tabindex="-1" aria-labelledby="modalTaskLabel" aria-hidden="true" data-id>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="modalTaskLabel">Добавление новой задачи</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3" id="formTask" novalidate onsubmit="return(false)">
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <select class="form-select input-form" id="inputFIOTask" placeholder="user" required>
+                                </select>
+                                <label class="ms-1" for="inputFIOTask">ФИО Сотрудника</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <select class="form-select input-form" id="inputTypeTask" placeholder="type" required>
+                                </select>
+                                <label class="ms-1" for="inputTypeTask">Тип задачи</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <select class="form-select input-form" id="inputStatusTask" list="statuses" placeholder="status" required>
+                                    <option value="1">Новая задача</option>
+                                    <option value="2">В работе</option>
+                                    <option value="3">Завершённая задача</option>
+                                </select>
+                                <label class="ms-1" for="inputStatusTask">Статус задачи</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control input-form" type="text" id="inputAboutTask" placeholder="about" autocomplete="off" required></textarea>
+                                <label class="ms-1" for="inputAboutTask">Описание задачи</label>
+                            </div>
+                        </div>
+                        <input type="hidden" id="actionTask" value="create">
+                    </form>
+                    <div class="collapse output">
+                        <div class="alert alert-danger m-0" id="outputTask">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary clearBtn">Отчистить</button>
+                    <button type="submit" class="btn btn-dark" form="formTask">Подвердить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

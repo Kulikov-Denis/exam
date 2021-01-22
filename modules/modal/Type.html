@@ -1,0 +1,30 @@
+<div data-role="modalType">
+    <div class="modal fade" id="modalType" tabindex="-1" aria-labelledby="modalTypeLabel" aria-hidden="true" data-id>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="modalTypeLabel">Добавление типа задачи</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3" id="formType" novalidate onsubmit="return(false)">
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input class="form-control input-form" type="search" id="inputTypeType" list="types" placeholder="data" autocomplete="off" required>
+                                <label class="ms-1" for="inputTypeType">Тип задачи</label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="collapse output">
+                        <div class="alert alert-danger m-0" id="outputType">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary clearBtn">Отчистить</button>
+                    <button type="submit" class="btn btn-dark" form="formType">Подвердить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

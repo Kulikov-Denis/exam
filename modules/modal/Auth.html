@@ -1,0 +1,35 @@
+<div data-role="modalAuth">
+    <div class="modal fade" id="modalAuth" tabindex="-1" aria-labelledby="modalAuthLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="modalAuthLabel">Авторицация</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3" id="formAuth" novalidate onsubmit="return(false)">
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input class="form-control input-form" type="text" id="inputFIOAuth" placeholder="fio" value="Root" required>
+                                <label class="ms-1" for="inputFIOAuth">ФИО Сотрудника</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input class="form-control input-form" type="password" id="inputPasswordAuth" placeholder="password" value="12345" required>
+                                <label class="ms-1" for="inputTypeAuth">Пароль</label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="collapse output">
+                        <div class="alert alert-danger m-0" id="outputAuth">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary clearBtn">Отчистить</button>
+                    <button type="submit" class="btn btn-dark" form="formAuth">Войти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
