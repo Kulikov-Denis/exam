@@ -1,0 +1,179 @@
+<div data-role="body" class="container-fluid p-3 pb-0">
+    <div data-role="tabs">
+        <nav>
+            <div class="nav nav-tabs bg-dark px-3 border-5 border-white">
+                <a class="nav-link dropdown-toggle active" data-bs-toggle="tab" href="#nav-new" id="nav-new-tab" data-value="1">Новые задачи</a>
+                <a class="nav-link dropdown-toggle" id="nav-progress-tab" data-bs-toggle="tab" href="#nav-progress" data-value="2">В работе</a>
+                <a class="nav-link dropdown-toggle" id="nav-complete-tab" data-bs-toggle="tab" href="#nav-complete" data-value="3">Завершенные</a>
+                <a class="nav-link dropdown-toggle" id="nav-type-tab" data-bs-toggle="tab" href="#nav-type" data-value="0">Типы задач</a>
+            </div>
+        </nav>
+        <div class="tab-content bg-white collapse" id="tab-collapse">
+            <div class="tab-pane fade p-3 active show" id="nav-new">
+                <div class="row g-3">
+                    <div class="col col-xl-2 col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="search" id="userNew" list="users" placeholder="Данные" autocomplete="off">
+                            <label class="ms-1" for="user">ФИО Сотрудника</label>
+                        </div>
+                    </div>
+                    <div class="col col-xl-2 col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="search" id="typeNew" list="types" placeholder="Закупка" autocomplete="off">
+                            <label class="ms-1" for="type">Тип задачи</label>
+                        </div>
+                    </div>
+                    <div class="col col-xl-2 col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="date" id="startDateNewNew" placeholder="Данные">
+                            <label class="ms-1" for="start">Начало периода</label>
+                        </div>
+                    </div>
+                    <div class="col col-xl-2 col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="date" id="endDateNewNew" placeholder="Данные">
+                            <label class="ms-1" for="end">Конец периода</label>
+                        </div>
+                    </div>
+                    <div class="col col-xl-4 col-md-8 col-12 border-start border-dark border-3">
+                        <button type="button" class="btn btn-outline-dark w-100 h-100 newButtonTask" data-bs-toggle="modal" data-bs-target="#modalTask">Новая задача</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade p-3" id="nav-progress">
+                <div class="row g-3">
+                    <div class="col col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="search" id="userStart" list="users" placeholder="Данные" autocomplete="off">
+                            <label class="ms-1" for="user">ФИО Сотрудника</label>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="search" id="typeStart" list="types" placeholder="Закупка" autocomplete="off">
+                            <label class="ms-1" for="type">Тип задачи</label>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="date" id="startDateNewStart" placeholder="Данные">
+                            <label class="ms-1" for="start">Начало постановки</label>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="date" id="endDateNewStart" placeholder="Данные">
+                            <label class="ms-1" for="end">Конец постановки</label>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="date" id="startDateStartStart" placeholder="Данные">
+                            <label class="ms-1" for="start">Начало приема</label>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="date" id="endDateStartStart" placeholder="Данные">
+                            <label class="ms-1" for="end">Конец приема</label>
+                        </div>
+                    </div>
+                    <div class="col col-lg-6 col-12 border-start border-dark border-3">
+                        <button type="button" class="btn btn-outline-dark w-100 h-100 newButtonTask" data-bs-toggle="modal" data-bs-target="#modalTask">Новая задача</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade p-3" id="nav-complete">
+                <div class="row g-3">
+                    <div class="col col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="search" id="userEnd" list="users" placeholder="Данные" autocomplete="off">
+                            <label class="ms-1" for="user">ФИО Сотрудника</label>
+                        </div>
+                    </div>
+                    <div class="col col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="search" id="typeEnd" list="types" placeholder="Закупка" autocomplete="off">
+                            <label class="ms-1" for="type">Тип задачи</label>
+                        </div>
+                    </div>
+                    <div class="col col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="date" id="startDateNewEnd" placeholder="Данные">
+                            <label class="ms-1" for="start">Начало постановки</label>
+                        </div>
+                    </div>
+                    <div class="col col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="date" id="endDateNewEnd" placeholder="Данные">
+                            <label class="ms-1" for="end">Конец постановки</label>
+                        </div>
+                    </div>
+                    <div class="col col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="date" id="startDateStartEnd" placeholder="Данные">
+                            <label class="ms-1" for="start">Начало приема</label>
+                        </div>
+                    </div>
+                    <div class="col col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="date" id="endDateStartEnd" placeholder="Данные">
+                            <label class="ms-1" for="end">Конец приема</label>
+                        </div>
+                    </div>
+                    <div class="col col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="date" id="startDateEndEnd" placeholder="Данные">
+                            <label class="ms-1" for="start">Начало исполнения</label>
+                        </div>
+                    </div>
+                    <div class="col col-md-4 col-sm-6 col-12">
+                        <div class="form-floating">
+                            <input class="form-control input-filter" type="date" id="endDateEndEnd" placeholder="Данные">
+                            <label class="ms-1" for="end">Конец исполнения</label>
+                        </div>
+                    </div>
+                    <div class="col col-md-4 col-12 border-start border-dark border-3">
+                        <button type="button" class="btn btn-outline-dark w-100 h-100 newButtonTask" data-bs-toggle="modal" data-bs-target="#modalTask">Новая задача</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade p-3" id="nav-type">
+                <div class="row g-3">
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-dark w-100" id="newButtonType" data-bs-toggle="modal" data-bs-target="#modalType">Новый тип</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="table" class="pb-1 w-100" style="padding-left: -10px;">
+        <div id="tableTaskWrapper" class="table-responsive">
+            <table class="table w-100 dt-responsive table-dark table-striped table-hover border-bottom border-light border-4" class="dataTable" id="dataTableTask">
+
+            </table>
+        </div>
+        <div id="tableTypeWrapper" class="d-none table-responsive">
+            <table class="table w-100 dt-responsive table-dark table-striped table-hover border-bottom border-light border-4" class="dataTable" id="dataTableType">
+
+            </table>
+        </div>
+    </div>
+    <div data-role="other">
+        <div class="toast-container position-absolute p-3 bottom-0 end-0">
+            <div id="toastOutput" class="toast d-flex align-items-center text-white bg-danger border-0 " role="alert">
+                <div class="toast-body" id="toastOutputText">
+                </div>
+                <button type="button" class="btn-close btn-close-white ms-auto me-2" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="list-group d-none position-absolute" id="contextMenu">
+            <a href="#" class="list-group-item list-group-item-action" id="contextUpdate">Изменить</a>
+            <a href="#" class="list-group-item list-group-item-action" id="contextDelete">Удалить</a>
+        </div>
+        <div>
+            <datalist id="users"></datalist>
+            <datalist id="types"></datalist>
+        </div>
+    </div>
+</div>
